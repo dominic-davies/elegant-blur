@@ -4,3 +4,24 @@ body {
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* blur effect */
+.showcase-area::after {
+  background-image: url(showcase.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  display: block;
+  filter: blur(10px);
+  height: 100vh;
+  transition: all 1000ms;
+  width: 100%;
+  -webkit-filter: blur(10px);
+}
+
+/* blur effect */
+.showcase-area:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
