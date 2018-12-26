@@ -110,3 +110,49 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* Small Screens */
+@media (max-width: 560px) {
+  .showcase-area::after {
+    height: 50vh;
+  }
+
+  .content-area {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content-area .content-logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .content-area .content-text {
+    display: none;
+  }
+
+  /* want columns to stack on mobile */
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* services too close when stacked */
+  .services div {
+    border-bottom: #333 dashed 1px;
+    padding: 1.2rem 1rem;
+  }
+}
+
+/* Landscape (for height) */
+@media (max-height: 500px) {
+
+  .content-area .content-title,
+  .content-area .content-text {
+    display: none;
+  }
+
+  .content-area {
+    top: 0;
+  }
+}
